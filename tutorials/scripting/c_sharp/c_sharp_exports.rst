@@ -254,7 +254,9 @@ Since Godot 4.0, nodes can be directly exported without having to use NodePaths.
     [Export]
     public Node Node { get; set; }
 
-Custom node classes can also be used, see :ref:`doc_c_sharp_global_classes`.
+Custom node classes can also be used, but exports will only be restricted
+to custom classes if their full inheritance chain has the `[GlobalClass]` attribute.
+See :ref:`doc_c_sharp_global_classes`.
 
 Exporting NodePaths like in Godot 3.x is still possible, in case you need it:
 
